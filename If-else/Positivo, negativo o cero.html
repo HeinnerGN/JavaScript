@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script> 
+            function pedir_datos(){
+                num=(parseInt(prompt("Ingrese un número")));
+                procesar_datos(num)
+            }
+
+            function procesar_datos(num){
+                if (num >= 1){
+                    resultado="El numero es positivio";
+                }
+                else if (num < 0){
+                    resultado="El numero es negativo";
+                }
+                else {
+                    resultado="El numero es cero";
+                }
+                imprimir_datos(resultado)
+            }
+
+            function imprimir_datos(resultado){
+                alert(resultado)
+                console.log(resultado);
+            }
+            pedir_datos()
+        </script>
+    </body>
+</html>
