@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            function pedir_datos(){ 
+            peso=(parseFloat(prompt("Ingrese su peso: ")));
+            altura=(parseFloat(prompt("Ingrese su altura: ")));
+            procesar_datos(peso, altura)
+            }
+
+            function procesar_datos(peso, altura){
+                IMC=peso/(altura*altura)
+                resultado=IMC
+                if (IMC<18.5){
+                    resultado="Bajo peso";
+                }
+                else if(IMC>=18.5 && IMC<25){
+                    resultado="Peso normal";
+                }
+                else if(IMC>=25 && IMC<30){
+                    resultado="Sobrepeso";
+                }
+                else if(IMC>30){
+                    resultado="Obesidad";
+                }
+                else{
+                    alert("Error al calcular el IMC")
+                }
+                imprimir_datos(resultado)
+            }
+
+            function imprimir_datos(){
+                alert(resultado)
+                console.log(resultado);
+            }
+            pedir_datos()
+        </script>
+    </body>
+</html>
