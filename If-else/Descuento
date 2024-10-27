@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <script>    
+        function pedir_datos(){
+            monto=(parseFloat(prompt("Ingrese el monto total de compra")));
+            procesar_datos(monto)
+        }
+
+        function procesar_datos(monto){
+            descuento=0;
+            if (monto>=1000){
+                descuento=0.10;
+                total=monto*descuento;
+                resultado="El monto de total de compra es de " +total;
+            }
+            else if (monto>=500 && monto<1000){
+                descuento=0.5;
+                total=monto*descuento;
+                resultado="El monto total de compra es de " +total
+            }
+            else{
+                mensaje="Error";
+            }
+            mostrar_datos(monto, resultado)
+        }
+
+        function mostrar_datos(monto, resultado){
+            alert(resultado)
+            console.log(resultado)
+        }
+        pedir_datos()
+    </script>
+</html>
