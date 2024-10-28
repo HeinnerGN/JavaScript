@@ -43,6 +43,16 @@
             </div>
         </div>
 
+        <div class="contenedor">
+            <h1 id="titulo">DOM 5</h1>
+            <p>document.querySelectorAll</p>
+            <button onclick="cuadro5()">Mostrar</button>
+            <div>
+                <h1 id="titulo_dom5"></h1>
+                <p id="texto_dom5"></p>
+            </div>
+        </div>
+
         <script>
             function cuadro1(){
                 var elemento=document.getElementById("titulo_dom1");
@@ -71,6 +81,13 @@
                 elemento.innerHTML="Que hace?";
                 var texto_dom4=document.querySelector(".texto_dom4");
                 texto_dom4.innerHTML="Permite seleccionar el primer elemento que coincide con un selector CSS."
+            }
+
+            function cuadro5(){
+                var elemento=document.querySelectorAll("#titulo_dom5");
+                elemento[0].innerHTML="Que hace?";
+                var texto_dom5=document.querySelectorAll("#texto_dom5");
+                texto_dom5[0].innerHTML="Devuelve un NodeList de todos los elementos que coinciden con el selector";
             }
         </script>
     </body>
