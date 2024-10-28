@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="pruebascajas.css">
 
+    <body style="background-color: red;">
+        <div class="contenedor">
+            <h1 id="titulo">DOM 1</h1>
+            <p>document.getElementById</p>
+            <button onclick="cuadro1()">Mostrar</button>
+            <div>
+                <p id="titulo_dom1"></p>
+                <p id="texto_dom1"></p>
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <h1 id="titulo">DOM 2</h1>
+            <p>document.getElementsByClassName</p>
+            <button onclick="cuadro2()">Mostrar</button>
+            <div>
+                <h1 id="titulo_dom2"></h1>
+                <p class="texto_dom2"></p>
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <h1 id="titulo">DOM 3</h1>
+            <p>document.getElementByTagName</p>
+            <button onclick="cuadro3()">Mostrar</button>
+            <div>
+                <h1 id="titulo_dom3"></h1>
+                <div class="texto_dom3"></div>
+            </div>
+        </div>
+
+        <div class="contenedor">
+            <h1 id="titulo">DOM 4</h1>
+            <p>document.querySelector</p>
+            <button onclick="cuadro4()">Mostrar</button>
+            <div>
+                <h1 id="titulo_dom4"></h1>
+                <p class="texto_dom4"></p>
+            </div>
+        </div>
+
+        <script>
+            function cuadro1(){
+                var elemento=document.getElementById("titulo_dom1");
+                elemento.innerHTML="Que hace?";
+                var texto_dom1=document.getElementById("texto_dom1");
+                texto_dom1.innerHTML="Obtiene un elemento por su id"
+            }
+
+            function cuadro2(){
+                var elemento=document.getElementById("titulo_dom2");
+                elemento.innerHTML="Que hace?";
+                var texto_dom2=document.getElementsByClassName("texto_dom2")[0];
+                texto_dom2.innerHTML="Obtiene un elemento por su clase"
+            }
+
+            function cuadro3(){
+                var elemento=document.getElementById("titulo_dom3");
+                elemento.innerHTML="Que hace?";
+                var texto_dom3=document.getElementsByClassName("texto_dom3")[0];
+                texto_dom3.innerHTML="Obtiene un elemento por etiquetas/contenedor"    
+                
+            }
+
+            function cuadro4(){
+                var elemento=document.querySelector("#titulo_dom4");
+                elemento.innerHTML="Que hace?";
+                var texto_dom4=document.querySelector(".texto_dom4");
+                texto_dom4.innerHTML="Permite seleccionar el primer elemento que coincide con un selector CSS."
+            }
+        </script>
+    </body>
+</html>
