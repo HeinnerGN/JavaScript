@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script> 
+            function pedir_datos(){
+                NomEstudiante=prompt("Ingrese nombre del estudiante: ");
+                num=(parseInt(prompt("Nota del estudiante: ")));
+                proceso_datos(NomEstudiante, num)
+            }
+            
+            function proceso_datos(NomEstudiante, num){
+                if (num >= 60){
+                    resultado="El estudiante aprobó el examen";
+                }
+                else{
+                    resultado="El estudiante no aprobó el examen";
+                }
+                imprimir_datos(resultado)
+            }
+
+            function imprimir_datos(resultado){
+                alert(resultado)
+                console.log(resultado);
+            }
+            pedir_datos()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script> 
+            function pedir_datos(){
+                num=(parseInt(prompt("Ingrese un número")));
+                proceso_datos(num)
+            }
+            
+            function proceso_datos(num){
+                if (num % 2 == 0){
+                    resultado="El numero es Par";
+                }
+                else{
+                    resultado="El numero es Impar";
+                }
+                imprimir_datos(resultado)
+            }
+
+            function imprimir_datos(resultado){
+                alert(resultado)
+                console.log(resultado);
+            }
+            pedir_datos()
+        </script>
+    </body>
+</html>

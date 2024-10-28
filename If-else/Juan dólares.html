@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script> 
+            function pedir_datos(){
+                dolares=(parseInt(prompt("Dolares de Juan: ")));
+                procesar_datos(dolares)
+            }
+
+            function procesar_datos(dolares){
+                David=dolares/2;
+                cantidad=dolares+David;
+                Jose=cantidad/2;
+                resultado=dolares+David+Jose;
+                imprimir_datos(resultado)
+            }
+
+            function imprimir_datos(resultado){
+                alert(resultado)
+                console.log(resultado);
+            }
+            pedir_datos()
+        </script>
+    </body>
+</html>
