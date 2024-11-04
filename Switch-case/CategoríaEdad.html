@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var edad=0;
+            var tipo=" ";
+            var edad=parseInt(prompt("Ingrese su edad"));
+            
+            if (edad<12){
+                tipo="niño"
+            }
+            if (edad>12 && edad <18){
+                tipo="Adolescente"
+            }
+            if (edad>18 && edad<30){
+                tipo="Adulto"
+            }if (edad>30){
+                tipo="Adulto Mayor"
+            }
+            
+            switch(tipo){
+                case "niño":
+                    console.log("Usted pertenece a categoria Niño");
+                    break;
+                case "Adolescente":
+                    console.log("Usted pertenece a categoria Adolescente");
+                    break;
+                case "Adulto":
+                    console.log("Usted pertenece a categoria Adulto");
+                    break;
+                case "Adulto Mayor":
+                    console.log("Usted pertenece a categoria Adulto Mayor");
+                    break;
+                default:
+                    console.log("Error, ingrese los datos correctamente")
+            }
+        </script>
+    </body>
+</html>
