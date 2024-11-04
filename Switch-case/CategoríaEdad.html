@@ -2,40 +2,38 @@
 <html>
     <body>
         <script>
-            function solicitarEdad() {
-                let edad = parseInt(prompt("Ingrese su edad:"));
-                return edad;
+            var edad=0;
+            var tipo=" ";
+            var edad=parseInt(prompt("Ingrese su edad"));
+            
+            if (edad<12){
+                tipo="niño"
             }
-
-            function determinarCategoria(edad) {
-                let categoria;
-                switch (true) {
-                    case (edad >= 0 && edad <= 12):
-                        categoria = "niño";
-                        break;
-                    case (edad >= 13 && edad <= 17):
-                        categoria = "adolescente";
-                        break;
-                    case (edad >= 18 && edad <= 54):
-                        categoria = "adulto";
-                        break;
-                    case (edad >= 55):
-                        categoria = "adulto mayor";
-                        break;
-                    default:
-                        categoria = "Edad no válida";
-                        break;
-                }
-                return categoria;
+            if (edad>12 && edad <18){
+                tipo="Adolescente"
             }
-
-            function mostrarCategoria(categoria) {
-                console.log("La categoría de edad es:", categoria);
+            if (edad>18 && edad<30){
+                tipo="Adulto"
+            }if (edad>30){
+                tipo="Adulto Mayor"
             }
-
-            const edad = solicitarEdad();
-            const categoria = determinarCategoria(edad);
-            mostrarCategoria(categoria);
+            
+            switch(tipo){
+                case "niño":
+                    console.log("Usted pertenece a categoria Niño");
+                    break;
+                case "Adolescente":
+                    console.log("Usted pertenece a categoria Adolescente");
+                    break;
+                case "Adulto":
+                    console.log("Usted pertenece a categoria Adulto");
+                    break;
+                case "Adulto Mayor":
+                    console.log("Usted pertenece a categoria Adulto Mayor");
+                    break;
+                default:
+                    console.log("Error, ingrese los datos correctamente")
+            }
         </script>
     </body>
 </html>
